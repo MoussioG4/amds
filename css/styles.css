@@ -1,0 +1,82 @@
+body {
+    font-size: 16px;
+    color: #0c0c0c;
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+  }
+
+/** HEADER **/
+#header-nav {
+    background-color: #0c0c0c;
+    border-radius: 0;
+    border: 0;
+}
+  
+#logo-img {
+    background: url('../pictures/Logo.png') no-repeat;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+}
+
+.navbar-brand {
+    padding-top: 25px;
+}
+
+.navbar-brand h1 { /* AM */
+    color: #ffffff;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: .75;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus {
+    text-decoration: none;
+}
+
+.navbar-brand p { /* DIGITAL SOLUTIONS */
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: .7em;
+}
+
+#services_icon {
+    background: url('../pictures/services_icon.png') no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+}
+
+#products_icon {
+    background: url('../pictures/products_icon.png') no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+}
+
+#contact_us_icon {
+    background: url('../pictures/contact_us_icon.png') no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+}
+
+#nav-list {
+    margin-top: 10px;
+}
+
+#nav-list a {
+    color: #ffffff;
+    text-align: center;
+}
+
+#nav-list a:hover {
+    background: #E7E7E7;
+}
+
+#nav-list a span {
+    font-size: 1.8em;
+}
