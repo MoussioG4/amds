@@ -33,6 +33,7 @@ body {
 
 .navbar-brand a {
 text-decoration: none;
+color: #ffffff;
 }
 
 .navbar-brand h1 { /* AM */
