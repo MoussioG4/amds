@@ -6,6 +6,10 @@ body {
   }
 
 /** HEADER **/
+#header {
+    border-bottom: 3px solid #f46530;
+}
+
 #header-nav {
     background-color: #0c0c0c;
     border-radius: 0;
@@ -28,6 +32,7 @@ body {
 }
 
 #brand_text {
+    margin-top: 10px;
     margin-left: 5px;
 }
 
@@ -72,6 +77,8 @@ color: #ffffff;
 #services_icon {
     background: url('../pictures/services_icon.png') no-repeat;
     background-size: contain;
+    margin-left: 10px;
+    margin-right: 10px;
     width: 50px;
     height: 50px;
 }
@@ -79,6 +86,8 @@ color: #ffffff;
 #products_icon {
     background: url('../pictures/products_icon.png') no-repeat;
     background-size: contain;
+    margin-left: 10px;
+    margin-right: 10px;
     width: 50px;
     height: 50px;
 }
@@ -86,6 +95,8 @@ color: #ffffff;
 #contact_us_icon {
     background: url('../pictures/contact_us_icon.png') no-repeat;
     background-size: contain;
+    margin-left: 10px;
+    margin-right: 10px;
     width: 50px;
     height: 50px;
 }
@@ -110,4 +121,28 @@ color: #ffffff;
 
 #nav-list a span {
     font-size: 1.8em;
+}
+
+@media (max-width: 992px) {
+    .nav-item div{
+        float: left;
+    }
+
+    #nav-list a {
+        height: 50px;
+    }
+
+    #nav-text {
+        padding-top: 45%;
+    }
+}
+
+@media (min-width: 993px) {
+    .nav-item{
+        width: 86px;
+        border:0.5px solid #E7E7E7;
+        padding: 4px;
+        border-radius: 5%;
+        margin-left: 5px;
+    }
 }
