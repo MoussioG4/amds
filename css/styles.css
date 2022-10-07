@@ -147,6 +147,8 @@ color: #ffffff;
     }
 }
 
+/* HOME PAGE */
+
 #main-content h1 {
     font-size: 48px;
     font-weight: 500;
@@ -154,3 +156,77 @@ color: #ffffff;
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+#home-tiles {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+#services-tile, #products-tile, #contact-tile {
+    height: 150px;
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+#services-tile:hover, #products-tile:hover, #contact-tile:hover {
+    box-shadow: 0 1px 5px 1px #0c0c0c;
+}
+
+#services-tile{
+    background: url('../pictures/Service.jpg') no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+#products-tile{
+    background: url('../pictures/Products.jpg') no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+#contact-tile{
+    background: url('../pictures/Contact.jpg') no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+#services-tile span, #products-tile span, #contact-tile span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.6em;
+    background-color: #000;
+    color: #fff;
+    opacity: .7;
+}
+/* END HOME PAGE */
+
+/* FOOTER */
+
+#footer {
+    background-color: #0c0c0c;
+    border-top: 3px solid #f46530;
+    height: 100px;
+}
+
+#copyright-image{
+    margin-top: 20px;
+    background: url('../pictures/copyright.png') no-repeat;
+    background-size:cover;
+    background-position: center;
+    height: 50px;
+    width: 50px;
+}
+
+#footer span {
+    margin-top: 35px;
+    margin-left: 5px;
+    color: #fff;
+    font-size: 0.8em;
+}
+
+/* END FOOTER */
