@@ -210,7 +210,9 @@ color: #ffffff;
 #footer {
     background-color: #0c0c0c;
     border-top: 3px solid #f46530;
-    height: 100px;
+    position:absolute;
+    width:100%;
+    bottom:0px;
 }
 
 #copyright-image{
@@ -230,3 +232,82 @@ color: #ffffff;
 }
 
 /* END FOOTER */
+
+/* SERVICES PAGE */
+
+#services-tiles {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+#requirements-tile, #architecture-tile, #failure_mngmt-tile, #consulting-tile, #project_mngmt-tile, #sw_dev-tile {
+    height: 150px;
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+#requirements-tile{
+    background: url('../pictures/requirenements.jpg') no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+#architecture-tile{
+    background: url('../pictures/architecture.jpg') no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+#failure_mngmt-tile{
+    background: url('../pictures/failure_mngmt.jpg') no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+#consulting-tile{
+    background: url('../pictures/consulting.jpg') no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+#project_mngmt-tile{
+    background: url('../pictures/project_mngmt.jpg') no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+#sw_dev-tile{
+    background: url('../pictures/sw_dev.jpg') no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+#requirements-tile span, #architecture-tile span, #failure_mngmt-tile span, #consulting-tile span, #project_mngmt-tile span, #sw_dev-tile span{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.6em;
+    background-color: #000;
+    color: #fff;
+    opacity: .7;
+}
+
+#requirements-tile:hover, #architecture-tile:hover, #failure_mngmt-tile:hover, #consulting-tile:hover, #project_mngmt-tile:hover, #sw_dev-tile:hover {
+    box-shadow: 0 1px 5px 1px #0c0c0c;
+}
+
+/* END SERVICES PAGE */
+
+/* RQ PAGE */
+
+#RQ_image{
+    background: url('../pictures/requirenements_big.jpg') no-repeat;
+    background-size:cover;
+    background-position: center;
+
+}
+/* END RQ PAGE */
