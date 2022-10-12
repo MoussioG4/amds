@@ -1,4 +1,7 @@
 body {
+    min-height: 100vh;
+    display:flex; 
+    flex-direction:column;
     margin-bottom: 10px;
     font-size: 16px;
     color: #0c0c0c;
@@ -151,6 +154,10 @@ color: #ffffff;
 
 /* HOME PAGE */
 
+#main-content{
+    flex:1;
+}
+
 #main-content h1 {
     font-size: 48px;
     font-weight: 500;
@@ -212,13 +219,12 @@ color: #ffffff;
 #footer {
     background-color: #0c0c0c;
     border-top: 3px solid #f46530;
-    position:fixed;
-    bottom: 0;
-    width:100%;
+    
 }
 
 #copyright-image{
-    margin-top: 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
     background: url('../pictures/copyright.png') no-repeat;
     background-size:cover;
     background-position: center;
@@ -227,7 +233,7 @@ color: #ffffff;
 }
 
 #footer span {
-    margin-top: 35px;
+    margin-top: 30px;
     margin-left: 5px;
     color: #fff;
     font-size: 0.8em;
@@ -306,10 +312,17 @@ color: #ffffff;
 
 /* RQ PAGE */
 
+#RQ_text{
+    margin-top: 20px;
+}
+
 #RQ_image{
     background: url('../pictures/requirenements_big.jpg') no-repeat;
     background-size:cover;
     background-position: center;
+    height: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
 }
 /* END RQ PAGE */
