@@ -326,3 +326,38 @@ color: #ffffff;
 
 }
 /* END RQ PAGE */
+
+/* PRODUCTS PAGE */
+
+#products-tiles {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+#Product1-tile, #Product2-tile, #Product3-tile {
+    height: 150px;
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+#Product1-tile, #Product2-tile, #Product3-tile{
+    background: url('../pictures/product.jpg') no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+#Product1-tile span, #Product2-tile span, #Product3-tile span{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.6em;
+    background-color: #000;
+    color: #fff;
+    opacity: .7;
+}
+
+/* END OFPRODUCTS PAGE */
