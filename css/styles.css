@@ -361,3 +361,34 @@ color: #ffffff;
 }
 
 /* END OFPRODUCTS PAGE */
+
+/* CONTACT PAGE */
+#name_text {
+    font-weight: 700;
+    width: 90px;
+}
+
+#given_name_text {
+    font-weight: 700;
+    width: 130px;
+}
+
+#surname_input {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+#email_text {
+    font-weight: 700;
+    width: 160px;
+}
+
+#email_input {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+
+/* END OF CONTACT PAGE */
