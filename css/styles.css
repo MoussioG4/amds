@@ -363,14 +363,9 @@ color: #ffffff;
 /* END OFPRODUCTS PAGE */
 
 /* CONTACT PAGE */
-#name_text {
+#surname_text {
     font-weight: 700;
     width: 90px;
-}
-
-#given_name_text {
-    font-weight: 700;
-    width: 130px;
 }
 
 #surname_input {
@@ -379,9 +374,21 @@ color: #ffffff;
     margin-bottom: 20px;
 }
 
+#given_name_text {
+    font-weight: 700;
+    width: 130px;
+    text-align: right;
+}
+
+#given_name_input {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
 #email_text {
     font-weight: 700;
-    width: 160px;
+    width: 140px;
 }
 
 #email_input {
@@ -390,5 +397,40 @@ color: #ffffff;
     margin-bottom: 20px;
 }
 
+#message_text {
+    font-weight: 700;
+    width: 160px;
+}
+
+#message_input {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 20px;
+}
+
+#message_button {
+    width: 130px;
+    height: 30px;
+    margin-bottom: 20px;
+    background-color: #f46530;
+    font-weight: 700;
+    color: #E7E7E7;
+    border: 3px solid #0c0c0c;
+}
+
+#message_button:hover {
+    background-color: #0c0c0c;
+}
+
+@media (max-width: 519px) {
+    #given_name_text {
+        text-align: left;
+    }
+}
+
+@media (min-width: 520px) and (max-width: 991px) {
+    
+    
+}
 
 /* END OF CONTACT PAGE */
