@@ -7,6 +7,7 @@ body {
     color: #0c0c0c;
     background-color: #ffffff;
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
   }
 
 /** HEADER **/
@@ -365,34 +366,35 @@ color: #ffffff;
 /* CONTACT PAGE */
 #surname_text {
     font-weight: 700;
-    width: 90px;
+    width: 70px;
 }
 
 #surname_input {
-    width: 300px;
+    width: 330px;
     height: 30px;
     margin-bottom: 20px;
 }
 
 #given_name_text {
     font-weight: 700;
-    width: 130px;
-    text-align: right;
+    width: 90px;
 }
 
 #given_name_input {
-    width: 300px;
+    width: 330px;
     height: 30px;
     margin-bottom: 20px;
 }
 
 #email_text {
     font-weight: 700;
-    width: 140px;
+    width: 126px;
+    padding-right: 0;
+
 }
 
 #email_input {
-    width: 300px;
+    width: 330px;
     height: 30px;
     margin-bottom: 20px;
 }
@@ -422,15 +424,10 @@ color: #ffffff;
     background-color: #0c0c0c;
 }
 
-@media (max-width: 519px) {
-    #given_name_text {
-        text-align: left;
+@media (max-width: 455px) {
+    #email_input {
+        margin-left: 12px;
     }
-}
-
-@media (min-width: 520px) and (max-width: 991px) {
-    
-    
 }
 
 /* END OF CONTACT PAGE */
