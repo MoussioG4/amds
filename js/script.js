@@ -1,4 +1,4 @@
-// $(function () { // Need to reqrite this bcs bootstrap 5.2 does not use jquery 
+// $(function () { // Need to rewrite this bcs bootstrap 5.2 does not use jquery 
 
     // Same as document.querySelector("navbarToggle").addEventListener("blur", ...)
   //  $("#navbarToggle").blur(function (event) {
@@ -14,6 +14,9 @@
     var amds = {};
     
     var homeHtml = "snippets/home-snippet.html";
+    var servicesHtml = "snippets/services-snippet.html";
+    var productsHtml = "snippets/products-snippet.html";
+    var contactHtml = "snippets/contact-snippet.html"
 
     // Convinienve function for inserting innerHtmL for 'select'
     var insertHtml = function (selector, html) {
@@ -37,6 +40,33 @@
             document.querySelector("#main-content").innerHTML = responseText;
         },
         false);
+
+        // On click on Services load services
+        amds.loadServices = function (){
+            showLoading("#main-content");
+            $ajaxUtils.sendGetRequest(servicesHtml, function (responseText) {
+                document.querySelector("#main-content").innerHTML = responseText;
+            },
+            false);
+        }
+
+        // On click on Products load products
+        amds.loadProducts = function (){
+            showLoading("#main-content");
+            $ajaxUtils.sendGetRequest(productsHtml, function (responseText) {
+                document.querySelector("#main-content").innerHTML = responseText;
+            },
+            false);
+        }
+
+        // On click on Contact us load contact page
+        amds.loadContact = function (){
+            showLoading("#main-content");
+            $ajaxUtils.sendGetRequest(contactHtml, function (responseText) {
+                document.querySelector("#main-content").innerHTML = responseText;
+            },
+            false);
+        }
     });
     
     global.$amds = amds;
