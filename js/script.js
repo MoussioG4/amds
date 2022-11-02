@@ -48,7 +48,22 @@
                 document.querySelector("#main-content").innerHTML = responseText;
             },
             false);
-        }
+
+            //Remove active state from all other buttons
+            var classes = document.querySelector("#ProductsButton").className;
+            classes = classes.replace(new RegExp("active-button", "g"), "");
+            document.querySelector("#ProductsButton").className = classes;
+            classes = document.querySelector("#ContactButton").className;
+            classes = classes.replace(new RegExp("active-button", "g"), "");
+            document.querySelector("#ContactButton").className = classes;
+
+            //Add active state to the Services button
+            classes = document.querySelector("#ServicesButton").className;
+            if (classes.indexOf("active-button") == -1) {
+                classes += " active-button";
+                document.querySelector("#ServicesButton").className = classes;
+            };
+        };
 
         // On click on Products load products
         amds.loadProducts = function (){
@@ -57,6 +72,21 @@
                 document.querySelector("#main-content").innerHTML = responseText;
             },
             false);
+
+            //Remove active state from all other buttons
+            var classes = document.querySelector("#ServicesButton").className;
+            classes = classes.replace(new RegExp("active-button", "g"), "");
+            document.querySelector("#ServicesButton").className = classes;
+            classes = document.querySelector("#ContactButton").className;
+            classes = classes.replace(new RegExp("active-button", "g"), "");
+            document.querySelector("#ContactButton").className = classes;
+
+            //Add active state to the Products button
+            classes = document.querySelector("#ProductsButton").className;
+            if (classes.indexOf("active-button") == -1) {
+                classes += " active-button";
+                document.querySelector("#ProductsButton").className = classes;
+            };
         }
 
         // On click on Contact us load contact page
@@ -66,6 +96,21 @@
                 document.querySelector("#main-content").innerHTML = responseText;
             },
             false);
+
+            //Remove active state from all other buttons
+            var classes = document.querySelector("#ServicesButton").className;
+            classes = classes.replace(new RegExp("active-button", "g"), "");
+            document.querySelector("#ServicesButton").className = classes;
+            classes = document.querySelector("#ProductsButton").className;
+            classes = classes.replace(new RegExp("active-button", "g"), "");
+            document.querySelector("#ProductsButton").className = classes;
+
+            //Add active state to the Contact button
+            classes = document.querySelector("#ContactButton").className;
+            if (classes.indexOf("active-button") == -1) {
+                classes += " active-button";
+                document.querySelector("#ContactButton").className = classes;
+            };
         }
     });
     
