@@ -1,18 +1,7 @@
-// $(function () { // Need to rewrite this bcs bootstrap 5.2 does not use jquery 
-
-    // Same as document.querySelector("navbarToggle").addEventListener("blur", ...)
-  //  $("#navbarToggle").blur(function (event) {
-   //     var screenWidth = window.innerWidth;
-    //    if (screenWidth < 992) {
-     //       $("#navbarNav").collapse('hide');
-      //  }
-   // });
-// });
-
 (function (global) {
 
     var amds = {};
-    
+
     var homeHtml = "snippets/home-snippet.html";
     var servicesHtml = "snippets/services-snippet.html";
     var productsHtml = "snippets/products-snippet.html";
@@ -44,6 +33,7 @@
         // On click on Services load services
         amds.loadServices = function (){
             showLoading("#main-content");
+            var LoadingServices = true;
             $ajaxUtils.sendGetRequest(servicesHtml, function (responseText) {
                 document.querySelector("#main-content").innerHTML = responseText;
             },
@@ -63,6 +53,15 @@
                 classes += " active-button";
                 document.querySelector("#ServicesButton").className = classes;
             };
+
+            //Collapse Navbar in mobile view
+            var screenWidth = window.innerWidth;
+            if (screenWidth < 992) {
+                var classes = document.querySelector("#navbarNav").className;
+                classes = classes.replace(new RegExp("show", "g"), "");
+                document.querySelector("#navbarNav").className = classes;
+            };
+            $amds.LoadingServices = LoadingServices;
         };
 
         // On click on Products load products
@@ -86,6 +85,14 @@
             if (classes.indexOf("active-button") == -1) {
                 classes += " active-button";
                 document.querySelector("#ProductsButton").className = classes;
+            };
+
+            //Collapse Navbar in mobile view
+            var screenWidth = window.innerWidth;
+            if (screenWidth < 992) {
+                var classes = document.querySelector("#navbarNav").className;
+                classes = classes.replace(new RegExp("show", "g"), "");
+                document.querySelector("#navbarNav").className = classes;
             };
         }
 
@@ -111,7 +118,27 @@
                 classes += " active-button";
                 document.querySelector("#ContactButton").className = classes;
             };
+
+            //Collapse Navbar in mobile view
+            var screenWidth = window.innerWidth;
+            if (screenWidth < 992) {
+                var classes = document.querySelector("#navbarNav").className;
+                classes = classes.replace(new RegExp("show", "g"), "");
+                document.querySelector("#navbarNav").className = classes;
+            };        
         }
+
+        //In mobile view collapse menu when it looses focus --> on blur
+        
+        document.querySelector("#main-content").addEventListener("click", function() {
+            var screenWidth = window.innerWidth;
+            if (screenWidth < 992) {
+                console.log($amds.LoadingServices);
+                var classes = document.querySelector("#navbarNav").className;
+                classes = classes.replace(new RegExp("show", "g"), "");
+                document.querySelector("#navbarNav").className = classes;
+            };            
+        });
     });
     
     global.$amds = amds;
