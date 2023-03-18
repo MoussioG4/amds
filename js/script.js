@@ -4,7 +4,7 @@
 
     var homeHtml = "snippets/home-snippet.html";
     var servicesHtml = "snippets/services-snippet.html";
-    var productsHtml = "snippets/products-snippet.html";
+    var productsHtml = "snippets/products-temp-snippet.html";
     var contactHtml = "snippets/contact-snippet.html"
 
     // Convinienve function for inserting innerHtmL for 'select'
