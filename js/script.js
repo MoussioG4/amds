@@ -5,7 +5,8 @@
     var homeHtml = "snippets/home-snippet.html";
     var servicesHtml = "snippets/services-snippet.html";
     var productsHtml = "snippets/products-temp-snippet.html";
-    var contactHtml = "snippets/contact-snippet.html"
+    var contactHtml = "snippets/contact-snippet.html";
+    var sendMailForm = "php/send_mail.php"
 
     // Convinienve function for inserting innerHtmL for 'select'
     var insertHtml = function (selector, html) {
@@ -126,6 +127,43 @@
                 classes = classes.replace(new RegExp("show", "g"), "");
                 document.querySelector("#navbarNav").className = classes;
             };        
+        }
+
+        // On click on Submit button send mail only in the contact snippet
+        window.onload = function() {
+            var myEle = document.getElementById("surname_input");
+            if(myEle != null) {
+                let form = document.getElementById("contact-form");
+                let surname = document.getElementById("surname_input");
+                let given_name = document.getElementById("given_name_input");
+                let email = document.getElementById("email_input");
+                let message = document.getElementById("message_input");
+
+
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault();
+            
+                    var data = new FormData(form);
+            
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', sendMailForm);
+                    xhr.onload = function() {
+                        if (xhr.status === 200) {
+                            // if the response is json encoded
+                            var response = JSON.parse(xhr.responseText);
+            
+                            if (response.message == 'valid') {
+                                // redirect here
+                            }
+            
+                            if (response.message == 'invalid') {
+                                // redirect here
+                            }
+                        }
+                    }
+                    xhr.send(data); 
+                });
+            }
         }
 
         //In mobile view collapse menu when it looses focus --> on blur

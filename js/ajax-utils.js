@@ -3,7 +3,7 @@
     // Set up a namespace for the utility
     var ajaxUtils = {};
 
-    // Returns an HTTP request obkect
+    // Returns an HTTP request object
     function getRequestObject() {
         if (window.XMLHttpRequest) {
             return (new XMLHttpRequest());
@@ -26,6 +26,20 @@
             };
             request.open("GET", requestUrl, true);
             request.send(null); //for POST requests only
+    };
+
+    // Makes an Ajax POST request to 'targettUrl'
+    ajaxUtils.sendPostRequest = function(targetUrl, PostData) {
+        var request = getRequestObject();
+        request.open("POST", targetUrl, true);
+        request.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
+        request.send(PostData); //for POST requests only
+
+        request.onload = function () {
+            if(xhr.status === 201) {
+                console.log("Post successfully created!")
+            }
+        };
     };
 
     // Only calls user provided 'responseHandler' function if response is ready  and not an error

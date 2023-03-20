@@ -1,24 +1,25 @@
 <h1>Contact Us</h1>
-      <h3 style="text-align: center; margin-bottom: 5%;">We are happy to hear from you! <br>Please use the following form to contact us.
-      </h3>
+<h3 style="text-align: center; margin-bottom: 5%;">We are happy to hear from you! <br>Please use the following form to contact us.
+</h3>
+  <form id="contact-form" method="post" action="">
+    <div id="name_input" class="row">
+      <div class="col-lg-6 col-md-12">
+        <label for="surname_input" id="surname_text">Surname:</label>
+        <input type="text" name="surname_input" id="surname_input" required>
+      </div><!-- End of surname input -->
+      <div class="col-lg-6 col-md-12">
+        <label for="given_name_input" id="given_name_text">Given name:</label>       
+        <input type="text" name="given_name_input" id="given_name_input" required>
+      </div><!-- End of given name input -->
+    </div><!-- End of name input -->
 
-      <div id="name_input" class="row">
-        <div class="col-lg-6 col-md-12">
-          <label for="surname_input" id="surname_text">Surname:</label>
-          <input id="surname_input" type="text">
-        </div><!-- End of surname input -->
-        <div class="col-lg-6 col-md-12">
-          <label for="given_name_input" id="given_name_text">Given name:</label>       
-          <input id="given_name_input" type="text">
-        </div><!-- End of given name input -->
-      </div><!-- End of name input -->
+    <div id="mail_input" class="row">
+      <label for="email_input" id="email_text" class="float-start">E-mail address:</label>       
+      <input name="email_input" id="email_input" class="float-start" type="email" required>
+    </div><!-- End of mail input -->
 
-      <div id="mail_input" class="row">
-        <label for="email_input" id="email_text" class="float-start">E-mail address:</label>       
-        <input id="email_input" class="float-start" type="email">
-      </div><!-- End of mail input -->
+    <label for="message_input" id="message_text">Your message:</label>
+    <textarea name="message_input" id="message_input" type="text" rows="6" required></textarea>
 
-      <label for="meessage_input" id="message_text">Your message:</label>
-      <textarea id="message_input" type="text" rows="6"></textarea>
-
-      <button type="button" id="message_button">Send message</button>
+    <button type="submit" id="message_button">Send message</button>
+  </form>
