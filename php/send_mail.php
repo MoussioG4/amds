@@ -19,8 +19,8 @@ $mail->Host = "smtp.goneo.de"
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 $mail->Port = 465;
 
-$mail->Username = "info@am-digital-solutions.de";
-$mail->Password = "w@8V$7j*mHJbHm";
+$mail->Username = "";
+$mail->Password = "";
 
 $mail->setForm($email, $surname, $given_name);
 $mail->addAddress("alexandros.moussiopoulos@am-digital-solutions.de");
